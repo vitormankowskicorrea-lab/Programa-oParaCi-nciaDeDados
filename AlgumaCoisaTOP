@@ -1,0 +1,252 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPKhofaAjxjprUKBsOmgyOo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vitormankowskicorrea-lab/Programa-oParaCi-nciaDeDados/blob/main/AlgumaCoisaTOP\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VHZrw23GQWxV",
+        "outputId": "baad3ca8-9179-43d5-973e-0a3da0307a80"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "git version 2.34.1\n",
+            "user.name=vitormankowskicorrea-lab\n",
+            "user.email=vitormankowskicorrea@gmail.com\n",
+            "init.defaultbranch=main\n"
+          ]
+        }
+      ],
+      "source": [
+        "!git --version\n",
+        "!git config --global user.name \"vitormankowskicorrea-lab\"\n",
+        "!git config --global user.email \"vitormankowskicorrea@gmail.com\"\n",
+        "!git config --global init.defaultBranch main\n",
+        "!git config --global --list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git clone https://github.com/vitormankowskicorrea-lab/Programa-oParaCi-nciaDeDados.git\n",
+        "%cd Programa-oParaCi-nciaDeDados\n",
+        "!ls\n",
+        "!git status"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6PhaU4ieS0J8",
+        "outputId": "7ef362ed-4464-4818-d4d7-7fd3ef1ba921"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'Programa-oParaCi-nciaDeDados'...\n",
+            "warning: You appear to have cloned an empty repository.\n",
+            "/content/Programa-oParaCi-nciaDeDados/Programa-oParaCi-nciaDeDados\n",
+            "On branch main\n",
+            "\n",
+            "No commits yet\n",
+            "\n",
+            "nothing to commit (create/copy files and use \"git add\" to track)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile README.md\n",
+        "\n",
+        "arquivos da aula 03: colab, GitHub e Git\n",
+        "\n",
+        "VitorM"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pllO_LBhS8jd",
+        "outputId": "0730959f-1b54-4789-93ac-9128cf2939fe"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Overwriting README.md\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git add README.md\n",
+        "!git status"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iGzUyasTXU6D",
+        "outputId": "edf0dfae-39a0-4869-e9ec-1f84648ba223"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "On branch main\n",
+            "\n",
+            "No commits yet\n",
+            "\n",
+            "Changes to be committed:\n",
+            "  (use \"git rm --cached <file>...\" to unstage)\n",
+            "\t\u001b[32mnew file:   README.md\u001b[m\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git commit -m \"uptade class README\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GJ8oomwZXbLW",
+        "outputId": "ccc90ddc-b504-439c-818f-47254df1994f"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "On branch main\n",
+            "Your branch is based on 'origin/main', but the upstream is gone.\n",
+            "  (use \"git branch --unset-upstream\" to fixup)\n",
+            "\n",
+            "nothing to commit, working tree clean\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git push origin main"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CC_-OocXYA7W",
+        "outputId": "600aa3bb-1fc0-4c6e-ae5e-59f939be73fc"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Everything up-to-date\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!apt-get -qq update\n",
+        "!apt-get -qq install gh\n",
+        "!GH_PROMPT_DISABLED=1 gh auth login --hostname github.com --git-protocol https --web\n",
+        "!gh auth setup-git\n",
+        "!gh auth status"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WjuNwEU8YFzr",
+        "outputId": "f904ca43-1ddf-49f8-cefd-187af9659462"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu jammy InRelease' does not seem to provide it (sources.list entry misspelt?)\n",
+            "\n",
+            "\u001b[0;33m!\u001b[0m First copy your one-time code: \u001b[0;1;39m1536-F5D9\u001b[0m\n",
+            "\u001b[0;1;39mOpen this URL\u001b[0m to continue in your web browser: https://github.com/login/device\n",
+            "\u001b[0;32m✓\u001b[0m Authentication complete.\n",
+            "- gh config set -h github.com git_protocol https\n",
+            "\u001b[0;32m✓\u001b[0m Configured git protocol\n",
+            "\u001b[0;33m!\u001b[0m Authentication credentials saved in plain text\n",
+            "\u001b[0;32m✓\u001b[0m Logged in as \u001b[0;1;39mvitormankowskicorrea-lab\u001b[0m\n",
+            "\u001b[0;33m!\u001b[0m You were already logged in to this account\n",
+            "\u001b[0;1;39mgithub.com\u001b[0m\n",
+            "  \u001b[0;32m✓\u001b[0m Logged in to github.com account \u001b[0;1;39mvitormankowskicorrea-lab\u001b[0m (/root/.config/gh/hosts.yml)\n",
+            "  - Active account: \u001b[0;1;39mtrue\u001b[0m\n",
+            "  - Git operations protocol: \u001b[0;1;39mhttps\u001b[0m\n",
+            "  - Token: \u001b[0;1;39mgho_************************************\u001b[0m\n",
+            "  - Token scopes: \u001b[0;1;39m'gist', 'read:org', 'repo'\u001b[0m\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "V-fBfmckiju6"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
